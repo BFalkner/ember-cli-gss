@@ -1,25 +1,13 @@
-# Ember-cli-gss
+# Ember-cli-gss [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-gss.svg)](http://emberobserver.com/addons/ember-cli-gss)
 
-This README outlines the details of collaborating on this Ember addon.
+This plugin includes [Grid Style Sheets](http://gridstylesheets.org/) into your Ember CLI project.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+```
+ember install:addon ember-cli-gss
+```
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+Put your gss styles into `app/styles/app.gss`.  This file will be created for you during installation.
