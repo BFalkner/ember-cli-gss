@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-gss",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Use Grid Style Sheets in your Ember CLI projects.",
   "directories": {
     "doc": "doc",
