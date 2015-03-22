@@ -1,4 +1,5 @@
 /* global GSS */
+import Ember from 'ember';
 
 export function initialize(container, application) {
   var rootElement = Ember.$(application.get('rootElement'))[0],
