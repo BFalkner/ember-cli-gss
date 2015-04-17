@@ -18,7 +18,8 @@
   "author": "Brennan Falkner <brennan@bfalkner.com>",
   "license": "MIT",
   "dependencies": {
-    "broccoli-static-compiler": "^0.2.1"
+    "broccoli-static-compiler": "^0.2.1",
+    "broccoli-merge-trees": "0.2.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",

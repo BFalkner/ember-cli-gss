@@ -1,7 +1,8 @@
 /* jshint node: true */
 'use strict';
 
-var pickFiles = require('broccoli-static-compiler');
+var pickFiles = require('broccoli-static-compiler'),
+    mergeTrees = require('broccoli-merge-trees');
 
 module.exports = {
   name: 'ember-cli-gss',
@@ -21,10 +22,17 @@ module.exports = {
   },
 
   treeForPublic: function() {
-    return pickFiles(this.app.bowerDirectory, {
-      srcDir: '/gss/dist',
-      files: [this.jsFileName],
-      destDir: '/assets'
-    });
+    var gssJS = pickFiles(this.app.bowerDirectory, {
+          srcDir: '/gss/dist',
+          files: [this.jsFileName],
+          destDir: '/assets'
+        }),
+        appGSS = pickFiles(this.app.trees.styles, {
+          srcDir: '',
+          files: ['app.gss'],
+          destDir: '/assets'
+        });
+
+    return mergeTrees([gssJS, appGSS]);
   }
 };
